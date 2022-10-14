@@ -1,17 +1,13 @@
 ﻿//Подсчитать сумму цифр в числе
-//Написать программу вычисления произведения чисел от 1 до N
-//Показать кубы чисел, заканчивающихся на четную цифру
 
-Console.WriteLine("Введите число ");
-int N = int.Parse(Console.ReadLine() ?? "0");
-
-int sum = 0;
+Console.WriteLine("Введите число: ");
+int n = int.Parse(Console.ReadLine() ?? "0");
 int i = 0;
-
-while (N > 0)
+int sum = 0;
+for (i = 0; n >= 1; i++)
 {
-    sum = sum + N % 10;
-    N = N / 10;
-    i++;
+    sum += n % 10;
+    n = n / 10;
 }
-Console.WriteLine(sum);
+Console.WriteLine("Сумма цифр в числе равна " + sum); 
+
